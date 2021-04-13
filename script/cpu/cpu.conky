@@ -75,7 +75,7 @@ http://conky.sourceforge.net/config_settings.html
 	-  Loading Lua-script  -
 	########################
 ]]
-	lua_load = 'script/cpu_rings/conky_draw.lua',
+	lua_load = 'cpu/conky_draw.lua',
 	lua_draw_hook_pre = 'main',
 
 }

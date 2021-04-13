@@ -1,5 +1,5 @@
 require 'cairo'
-package.path = package.path .. ';' .. os.getenv("HOME") .. '/.conky/my-conky/script/cpu_rings/?.lua'
+package.path = package.path .. ';' .. os.getenv("HOME") .. '/.conky/my-conky/script/cpu/?.lua'
 require 'conky_draw_config'
 
 

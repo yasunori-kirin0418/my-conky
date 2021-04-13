@@ -298,7 +298,7 @@ elements = {
 	{
 	kind = 'variable_text',
 	from = {x = 300, y = 80},
-	conky_value = 'exec python3 script/cpu_rings/get_cpu_info.py',
+	conky_value = 'exec python3 cpu/get_cpu_info.py',
 	font = my_font,
 	font_size = font_gap(15),
 	color = font_color,
