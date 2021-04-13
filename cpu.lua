@@ -96,5 +96,4 @@ ${font Cica:size=10}${offset 245}${voffset 4}${cpu cpu6}%
 ${font Cica:size=10}${offset 245}${voffset 4}${cpu cpu7}%
 ${font Cica:size=10}${offset 245}${voffset 4}${cpu cpu8}%
 ${offset 232}${voffset 7}${cpugraph cpu0 30,140}
-${font Cica:size=16}${offset 175}${voffset -20}${cpu cpu0}%
 ]]
