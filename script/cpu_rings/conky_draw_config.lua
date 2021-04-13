@@ -10,8 +10,11 @@ local center_y = 190
 local minimum_radius = 50
 local ring_increment_size = 18
 local my_font = 'Cica'
-local temp_cmd = 'sensors | grep "Package" | cut -c 17-20'
-
+local font_color = 0xd4d4d4
+local bg_color = 0x606060
+local bg_alpha = 0.5
+local fg_color = 0x006eff
+local fg_alpha = 0.8
 
 --conky.textで指定するフォントサイズとconky_drawの間に差がある為、
 --それを埋めるためのもの。
@@ -31,7 +34,11 @@ elements = {
 	conky_value = 'cpu cpu8',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 0),
 	max_value = 100,
@@ -45,7 +52,11 @@ elements = {
 	conky_value = 'cpu cpu7',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 1),
 	max_value = 100,
@@ -59,7 +70,11 @@ elements = {
 	conky_value = 'cpu cpu6',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 2),
 	max_value = 100,
@@ -73,7 +88,11 @@ elements = {
 	conky_value = 'cpu cpu5',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 3),
 	max_value = 100,
@@ -87,7 +106,11 @@ elements = {
 	conky_value = 'cpu cpu4',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 4),
 	max_value = 100,
@@ -101,7 +124,11 @@ elements = {
 	conky_value = 'cpu cpu3',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 5),
 	max_value = 100,
@@ -115,7 +142,11 @@ elements = {
 	conky_value = 'cpu cpu2',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 6),
 	max_value = 100,
@@ -129,7 +160,11 @@ elements = {
 	conky_value = 'cpu cpu1',
 	center = {x = center_x, y = center_y},
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	radius = minimum_radius + (ring_increment_size * 7),
 	max_value = 100,
@@ -152,14 +187,18 @@ elements = {
 	to = {x = 550, y = 100},
 	conky_value = 'exec sensors | grep "Package" | cut -c 17-20',
 	thickness = thickness_size,
+	bar_color = fg_color,
+	bar_alpha = fg_alpha,
 	bar_thickness = thickness_size,
+	background_color = bg_color,
+	background_alpha = bg_alpha,
 	background_thickness = thickness_size,
 	max_value = 100,
 	},{
 	kind = 'variable_text',
 	from = {x = 300, y = 105},
 	conky_value = 'execpi 120 sensors | grep "Package" | cut -c 17-20',
-	color = 0xFFFFFF,
+	color = font_color,
 	font = my_font,
 	font_size = font_gap(12),
 	alpha = 1,
@@ -167,7 +206,7 @@ elements = {
 	kind = 'static_text',
 	from = {x = 332, y = 105},
 	text = '℃',
-	color = 0xFFFFFF,
+	color = font_color,
 	font = my_font,
 	font_size = font_gap(12),
 	alpha = 1,
@@ -185,7 +224,7 @@ elements = {
 	text = 'CPU/01',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},{
 	kind = 'static_text',
@@ -193,7 +232,7 @@ elements = {
 	text = 'CPU/02',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},{
 	kind = 'static_text',
@@ -201,7 +240,7 @@ elements = {
 	text = 'CPU/03',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},{
 	kind = 'static_text',
@@ -209,7 +248,7 @@ elements = {
 	text = 'CPU/04',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},{
 	kind = 'static_text',
@@ -217,7 +256,7 @@ elements = {
 	text = 'CPU/05',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},{
 	kind = 'static_text',
@@ -225,7 +264,7 @@ elements = {
 	text = 'CPU/06',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},{
 	kind = 'static_text',
@@ -233,7 +272,7 @@ elements = {
 	text = 'CPU/07',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},{
 	kind = 'static_text',
@@ -241,7 +280,7 @@ elements = {
 	text = 'CPU/08',
 	font = my_font,
 	font_size = font_gap(10),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},
 
@@ -253,7 +292,7 @@ elements = {
 	font = my_font,
 	font_size = font_gap(25),
 	Bold = true,
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},
 	{
@@ -262,7 +301,7 @@ elements = {
 	conky_value = 'exec python3 script/cpu_rings/get_cpu_info.py',
 	font = my_font,
 	font_size = font_gap(15),
-	color = 0xFFFFFF,
+	color = font_color,
 	alpha = 1,
 	},
 }
