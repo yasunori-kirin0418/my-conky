@@ -28,17 +28,23 @@ http://conky.sourceforge.net/config_settings.html
 ]]
 --ウィンドウ表示方法
 	own_window = true,
-	own_window_type = 'orverride',
-	own_window_transparent = true,
+	own_window_type = 'override',
+	own_window_transparent = false,
 
 --境界線とウィンドウ・テキスト間の設定
 	border_inner_margin = 0,
 	border_outer_margin = 0,
 
 --表示位置
---	alignment = 'top_left',
---	gap_x = 270,
---	gap_y = 330,
+	alignment = 'mm',
+	gap_x = 0,
+	gap_y = 0,
+
+--サイズ
+    minimum_width = 300,
+    minimum_height = 300,
+    maximum_width= 500,
+
 
 --[[
 	#######################
@@ -48,7 +54,7 @@ http://conky.sourceforge.net/config_settings.html
 	draw_shades = false,
 	draw_outline = false,
 	draw_borders = false,
-	draw_graph_borders = false,
+	draw_graph_borders =true,
 
 --[[
 	###################
@@ -57,21 +63,30 @@ http://conky.sourceforge.net/config_settings.html
 ]]
 	override_utf8_locale = true,
 	use_xft = true,
-	xftfont = 'Source Han Sans:size=10',
+	font = 'Cica:size=10',
 	xftalpha = 0.8,
 
 	uppercase = false,
 
 	default_color = '#FFFFFF',
 
+--[[
+	########################
+	-  Loading Lua-script  -
+	########################
+]]
+	lua_load = 'memory/conky_draw.lua',
+	lua_draw_hook_pre = 'main',
 
 };
 
-conky.text = [[
 --[[
 表示される変数一覧は、
 http://conky.sourceforge.net/variables.html
 ]]
+
+conky.text = [[
+
 
 
 ]]
