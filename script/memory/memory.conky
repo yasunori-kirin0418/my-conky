@@ -86,8 +86,5 @@ http://conky.sourceforge.net/variables.html
 ]]
 
 conky.text = [[
-空きメモリ:$memfree
-バッファされたメモリ:$buffers
-キャッシュ済みメモリ:$cached
 ${memgraph 10,90}
 ]]
