@@ -38,10 +38,10 @@ http://conky.sourceforge.net/config_settings.html
 --表示位置
 	alignment = 'mm',
 	gap_x = 0,
-	gap_y = 0,
+	gap_y = -30,
 
 --サイズ
-    minimum_width = 300,
+    minimum_width = 500,
     minimum_height = 300,
     maximum_width= 500,
 
@@ -63,12 +63,12 @@ http://conky.sourceforge.net/config_settings.html
 ]]
 	override_utf8_locale = true,
 	use_xft = true,
-	font = 'Cica:size=10',
+	font = 'Cica:size=12',
 	xftalpha = 0.8,
 
 	uppercase = false,
 
-	default_color = '#FFFFFF',
+	default_color = '#d4d4d4',
 
 --[[
 	########################
@@ -86,7 +86,8 @@ http://conky.sourceforge.net/variables.html
 ]]
 
 conky.text = [[
-
-
-
+空きメモリ:$memfree
+バッファされたメモリ:$buffers
+キャッシュ済みメモリ:$cached
+${memgraph 10,90}
 ]]
