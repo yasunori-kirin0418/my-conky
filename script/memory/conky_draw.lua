@@ -494,6 +494,15 @@ function draw_variable_text(display, element)
   end
   cairo_select_font_face(display,element.font,font_slant,font_weight)
   local text = get_conky_value(element.conky_value,false)
+
+  --add property
+  if element.add_front then
+    text = element.front_text .. text
+  end
+  if element.add_rear then
+    text = text .. element.rear_text
+  end
+
   cairo_show_text (display,text)
 
   cairo_restore(display)
@@ -702,6 +711,11 @@ defaults = {
         italic=false,
         alpha=1.0,
         draw_function = draw_variable_text,
+        --Add properties
+        add_front=false,
+        add_rear=false,
+        front_text='',
+        rear_text='',
     },
     static_text = {
         color = 0x00FF6E,
